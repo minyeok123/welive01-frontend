@@ -81,8 +81,8 @@ export default function RegisterSingleModal({
 
     await onSubmit({
       ...formData,
-      building: `${formData.building}동`,
-      unitNumber: `${formData.unitNumber}호`,
+      building: formData.building,
+      unitNumber: formData.unitNumber,
     });
     handleModalClose();
   };

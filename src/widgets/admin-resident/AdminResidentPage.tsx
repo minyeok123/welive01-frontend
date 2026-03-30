@@ -82,7 +82,9 @@ export default function AdminResidentPage() {
   const totalPages = Math.ceil(totalCount / limit);
   const startingIndex = (currentPage - 1) * limit + 1;
 
-  const residents: AdminResidentData[] = data?.residents ?? [];
+  const residents: AdminResidentData[] = (data?.residents ?? []).filter(
+    (item) => !(item.email && typeof item.email === 'string' && !item.isRegistered)
+  );
 
   const isHouseholderLabelMap: Record<string, string> = {
     HOUSEHOLDER: '세대주',

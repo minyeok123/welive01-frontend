@@ -106,7 +106,7 @@ export default function ResidentInfoTable({ data, totalCount, currentPage, items
   const tdClass = 'p-3 text-center text-gray-500';
   const thClass = 'p-3 font-medium';
 
-  const registeredData = data.filter((item) => item.isRegistered === true);
+  const registeredData = data.filter((item) => typeof item.email === 'string' && item.email.length > 0);
   const finalDongOptions = dongOptions.some((opt) => opt.value === form.building)
     ? dongOptions
     : [...dongOptions, { value: form.building, label: `${form.building}동` }];
