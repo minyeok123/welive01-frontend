@@ -242,28 +242,28 @@ export default function SuperAdminTable({ data, currentPage, totalCount }: Props
                   </div>
                 </td>
                 <td className={tdClass}>
-                  <div className='line-clamp-1' title={item.name}>
-                    {item.name}
+                  <div className='line-clamp-1' title={item.name ?? ''}>
+                    {item.name ?? ''}
                   </div>
                 </td>
                 <td className={tdClass}>
-                  <div className='line-clamp-1' title={item.address}>
-                    {item.address}
+                  <div className='line-clamp-1' title={item.address ?? ''}>
+                    {item.address ?? ''}
                   </div>
                 </td>
                 <td className={tdClass}>
-                  <div className='line-clamp-1' title={item.adminName}>
-                    {item.adminName}
+                  <div className='line-clamp-1' title={item.adminName ?? ''}>
+                    {item.adminName ?? ''}
                   </div>
                 </td>
                 <td className={tdClass}>
-                  <div className='line-clamp-1' title={item.adminContact}>
+                  <div className='line-clamp-1' title={item.adminContact ?? ''}>
                     {formatPhoneNum(item.adminContact)}
                   </div>
                 </td>
                 <td className={tdClass}>
-                  <div className='line-clamp-1' title={item.adminEmail}>
-                    {item.adminEmail}
+                  <div className='line-clamp-1' title={item.adminEmail ?? ''}>
+                    {item.adminEmail ?? ''}
                   </div>
                 </td>
                 <td className={tdClass}>
